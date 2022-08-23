@@ -16,7 +16,7 @@ rules:
   pattern-sinks:
     - pattern: |
         <... ecrecover(...,$V,$R,$S) ...>
-  message: Potential Siganture with wrong number in function $F
+  message: Potential Signature with wrong number
   severity: ERROR
   mode: taint
   options:
