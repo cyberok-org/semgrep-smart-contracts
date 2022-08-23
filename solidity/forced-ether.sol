@@ -5,7 +5,7 @@ contract Vuln {
         require(msg.value > 0);
         return answer;
     	}
-	function f2(uint256 a) {
+	function vulnFunc2(uint256 a) {
 		bool c1 = address(this).balance >= 8;
 		bool c2 = address(this).balance >> 2 == 4;
 		require(c1 && c2);

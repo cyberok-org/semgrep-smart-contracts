@@ -1,18 +1,18 @@
 contract Vuln {
-    function f() isBridge {
+    function notVulnFunc() isBridge {
         msg.sender.call.value(5 ether)("");
     }
-    function f(address a) onlyOwner {
+    function notVulnFunc2(address a) onlyOwner {
         a.call.value(5 ether)("");
     }
-    function fn() private {
+    function vulnFunc() private {
         msg.sender.call.value(5 ether)("");
     }
-    function fbb() {
+    function vulnFunc2() {
         address a = msg.sender;
         a.call{value:5}("ff");
     }
-    function fcc() nonReentrant {
+    function notVulnFunc3() nonReentrant {
         msg.sender.call{value: msg.value}("");
     }
 }

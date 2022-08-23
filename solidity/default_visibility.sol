@@ -1,9 +1,17 @@
 contract Vuln {
-    function f1() {}
-    function f2(uint a) payable returns (uint256) {
+    function defaultVisibilityFunc1() {
+    
+    }
+    function defaultVisibilityFunc2(uint a) payable returns (uint256) {
 
     }
-    function f3() private {
+    function privateFunc() private {
+
+    }
+    function publicFunc() public {
+
+    }
+    function internalFunc() internal {
 
     }
 }

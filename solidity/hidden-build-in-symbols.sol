@@ -1,7 +1,8 @@
 contract Vuln {
 	function gasleft() returns(uint256) { return 5;}
-	function F() {
-		gasleft();
-		keccak256("gg");
+	
+	function vulnFunc() {
+		gasleft(); // override build-in symbol gasleft
+		keccak256("gg"); // not override
 	}
 }
